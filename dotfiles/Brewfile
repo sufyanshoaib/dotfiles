@@ -1,0 +1,58 @@
+tap "aws/tap"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+# Flexible lightweight test report tool
+brew "allure"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Vector graphics library with cross-device output support
+brew "cairo"
+# Dependency manager for Cocoa projects
+brew "cocoapods", link: false
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Run a Kubernetes cluster locally
+brew "minikube"
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
+# Platform built on V8 to build network applications
+brew "node"
+# Platform built on V8 to build network applications
+brew "node@14"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Object-relational database system
+brew "postgresql"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# User interface to the TELNET protocol
+brew "telnet"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Enables extra languages support for Tesseract
+brew "tesseract-lang"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Watch files and take action when they change
+brew "watchman"
+# Internet file retriever
+brew "wget"
+# JavaScript package manager
+brew "yarn"
+# AWS SAM CLI 🐿 is a tool for local development and testing of Serverless applications
+brew "aws/tap/aws-sam-cli"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
+# Free and open-source image editor
+cask "gimp"
+# Screen capture tool with mark up and sharing features
+cask "skitch"
