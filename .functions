@@ -1,0 +1,48 @@
+#   extract:  Extract most know archives with one command
+#   ---------------------------------------------------------
+    extract () {
+        if [ -f $1 ] ; then
+          case $1 in
+            *.tar.bz2)   tar xjf $1     ;;
+            *.tar.gz)    tar xzf $1     ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar e $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xf $1      ;;
+            *.tbz2)      tar xjf $1     ;;
+            *.tgz)       tar xzf $1     ;;
+            *.zip)       unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)     echo "'$1' cannot be extracted via extract()" ;;
+             esac
+         else
+             echo "'$1' is not a valid file"
+         fi
+    }
+
+#   ii:  display useful host related information
+#   (notes: color_codes need to be defined in .bash_profile
+#   and $HOST needs to be defined)
+#   -------------------------------------------------------------------
+
+    ii() {
+        echo -e "\nYou are logged on ${Red} $HOST"
+        echo -e "\nAdditional information:$Color_Off " ; uname -a
+        echo -e "\n${color_blue}Users logged on:$color_off " ; w -h
+        echo -e "\n${color_yellow}Current date :$color_off " ; date
+        echo -e "\n${color_pink}Machine stats :$color_off " ; uptime
+        echo -e "\n${color_cyan}Current network location :$color_off " ; scselect
+        echo -e "\n${color_green}Public facing IP Address :$color_off " ;myip
+        #echo -e "\n${color_blue}DNS Configuration:$color_off " ; scutil --dns
+        echo
+    }
+
+
+#   fopen:  create a file and open it in Sublime Text
+#   ---------------------------------------------------------
+    fopen () {
+      touch $1
+      open -a "Sublime Text" $1
+    }
+
