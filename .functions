@@ -46,3 +46,5 @@
       open -a "Sublime Text" $1
     }
 
+# Open a the manual of passed on command, as PDF file instead of in terminal
+function manpdf() { man -t "$@" | open -f -a "Preview" ;}
